@@ -1,0 +1,199 @@
+// ----------------------------
+//   Sketch Page
+// ----------------------------
+
+.sketch-container {
+    .ios-link {
+        position: absolute;
+        top: 60px;
+        right: 60px;
+    }
+    .ios {
+        @extend .hidden-xs;
+        height: 50px;
+        width: 100px;
+        display: block;
+        border: 1px solid $red;
+        margin: 0;
+        background-image: url("../img/iOS.png");
+        background-size: 100%;
+    }
+    .share {
+        @extend .hidden-xs;
+        position: absolute;
+        left: 48px;
+        height: 48px;
+        width: 48px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .share-fb {
+        top: 200px;
+        background-image: url("../img/icon-facebook.png");
+    }
+    .share-twitter {
+        top: 280px;
+        background-image: url("../img/icon-twitter.png");
+    }
+    .share-email {
+        top: 360px;
+        background-image: url("../img/icon-email.png");
+    }
+    background-color: $white;
+    background: url("../img/sketch-bg.png");
+    @media (min-width: 1000px) {
+        height: 100vh;
+    }
+    .welcome {
+        max-height: 1280px;
+        min-height: 580px;
+        @include nav-color($white);
+        .navbar-brand { display: none; }
+        @include scr(md) { padding: 10px 0 20px 0; }
+    }
+    .container-fluid {
+        @include scr(xs) { padding: 0; }
+    }
+    $s-logo-size: 80px;
+    .logo {
+        width: $s-logo-size;
+        height: $s-logo-size;
+        background-image: url("../img/sketch-off-logo-shadow.png");
+        padding: 2px 0 0 ($s-logo-size + 0px);
+        @include scr(md) { margin: 20px 0; }
+        @include scr(xs) { margin: 20px 0; }
+    }
+    .brand-title {
+        font-size: 24px;
+        color: $red;
+        margin: 16px 0 4px 0;
+    }
+    .brand-description {
+        width: 400px;
+        margin: 0;
+        font-size: 13px;
+    }
+    $card-width: 840px;
+    .sketch-card {
+        background-color: $white;
+        @media (min-width: $card-width + 1px) {
+            border: 2px solid $red;
+            padding: 6px 0 0 30px;
+            margin: 150px auto 0 auto;
+            width: $card-width;
+            height: 400px;
+        }
+        @media (max-width: $card-width) {
+            width: 100%;
+            padding: 0;
+            margin-right: 0;
+        }
+    }
+    $sketch-size: 340px;
+    .sketch-main {
+        height: auto;
+        @include scr(md) {
+            max-height: $sketch-size;
+            max-width: $sketch-size;
+            width: 100%;
+            margin: 20px 0;
+        }
+        @include scr(xs) {
+            max-height: $sketch-size * 1.5;
+            max-width: $sketch-size * 1.5;
+            width: 100vw;
+            margin-bottom: 20px;
+        }
+        padding: 0;
+    }
+    .sketch-img {
+        width: 100%;
+        height: auto;
+        box-shadow: 1px 2px 6px 0px #333;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .sketch-overlay {
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/sketch-frame.png");
+        background-size: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .vote-count {
+        font-family: "HelveticaNeue-CondensedBold", inherit;
+        color: white;
+        font-size: 40px;
+        position: absolute;
+        bottom: 12px;
+    }
+    .up-count {
+        right: 8%;
+    }
+    .down-count {
+        left: 8%;
+    }
+    .up-arrow {
+        background-image: url("../img/arrow-up.png");
+        right: 133%;
+    }
+    .down-arrow {
+        background-image: url("../img/arrow-down.png");
+        left: 150%;
+    }
+    .arrow {
+        width: 34px;
+        height: 20px;
+        background-size: contain;
+        position: absolute;
+        bottom: 33%;
+    }
+    .sketch-aside {
+        padding: 0;
+        @include scr(md) { margin: 20px 0 0 30px; }
+        @include scr(xs) { padding: 10px 20px; }
+    }
+    .sign-up {
+        margin: 20px 0;
+        width: 110%;
+        .input-group {
+            border: 2px solid $red;
+            padding: 0;
+        }
+        .input-group-addon {
+            color: $red;
+        }
+        .input-group-btn button {
+            margin: 0;
+            width: 130px;
+            background-color: $red;
+            &:hover, &:focus {
+                background-color: darken($red, 5%);
+            }
+        }
+        input {
+            @include placeholder();  // default
+        }
+    }
+    .output {
+        color: $red;
+    }
+    .inline-appstore {
+        @include scr(md) { display: none; }
+        margin: 20px 0;
+    }
+    .letter {
+        @include scr(md) { width: 340px; }
+        p {
+            font-size: 16px;
+            line-height: 18px;
+            color: #38454F;
+            .emphasize {
+                font-weight: 700;
+            }
+        }
+    }
+}

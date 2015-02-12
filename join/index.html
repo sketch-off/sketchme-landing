@@ -1,0 +1,55 @@
+---
+layout: default
+identifier: join
+---
+{% include navbar.html %}
+
+<header>
+    <div class="thin-container container">
+        <h2>Do you want to be one of the thousands, performing daily maintenance on an already sophisticated system?</h2>
+        <h2>Or rather, <span class="emphasize">do you want to one of the few, building something entirely new, something that will redefine how your friends <span class="italic">feel</span> their worlds?</span></h2>
+    </div>
+</header>
+<article>
+    <div class="container thin-container">
+        <div class="main-article">
+            <p>SketchMe is about bringing friends even closer to each other, and to their own worlds. You feel closer to your world because you now get to <span class="italic">feel</span> your world through your friends’ experiences, through the fun moments your friends captured.</p>
+            <p>We are doing this because we care. We care because we are building a product for so many people just like ourselves. We care because we are elevated to see friends become closer and happier.</p>
+            <p>If you share our care and vision, we’d love to have you with us. We are currently looking for: </p>
+        </div>
+        {% for job in site.data.jobs %}
+            <div class="job">
+                <h3 data-toggle="collapse" href="#job-{{ job.name }}">{{ job.title }} &nbsp;&#x276f;</h3>
+                <div class="collapse job-description" id="job-{{ job.name }}">
+                    <p>{{ job.overview }}</p>
+                    {% for section in job.sections %}
+                        <div class="job-section">
+                            <h4>{{ section.name }}</h4>
+                            <ul>
+                            {% for item in section.items %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </div>
+                    </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+        <div class="contact">
+            <p>Send us an email to <span class="email">build@sketch-off.com</span> with your</p>
+            <ol>
+                <li>Email account for Facebook</li>
+                <li>LinkedIn profile</li>
+                <li>Github profile (for engineering roles</li>
+                <li>Résumé</li>
+            </ol>
+            <p>and most importantly,</p>
+            <ol start="5">
+                <li>What you want to tell us.</li>
+            </ol>
+            <p>And we’ll chat!</p>
+        </div>
+    </div>
+</article>
+
+

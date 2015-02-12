@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SketchMe - Know Thy Friends</title>
+        {% if page.noindex %}
+            <meta name="robots" content="noindex, nofollow">
+        {% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+        <meta name="apple-itunes-app" content="app-id=806820979">
+        <meta name="description" content="Build your friends' profiles, and let them build yours. SketchOff is where friends share funny stories about each other and where you learn other sides of your friends.">
+        <meta name="keywords" content="SketchMe, social network, lean, profile, sketch, tag, friends, insight, instantly">
+        <meta name="author" content="2014 SketchOff, Inc.">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="/assets/img/app-logo.png">
+    </head>
+    <body>
+        <div class="{{ page.identifier }}-container">
+            {{ content }}
+            {% include footer.html %}
+        </div> <!-- /{{ page.identifier }}-container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        {% for js in page.scripts %}
+          <script src="/assets/js/{{ js }}.js"></script>
+        {% endfor %}
+        <script>
+            $('#nav-{{ page.identifier }}').addClass('active');
+
+        </script>
+    </body>
+</html>

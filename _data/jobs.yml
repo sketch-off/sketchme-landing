@@ -1,0 +1,79 @@
+- name: lead-architect
+  title: Lead Architect & Full Stack Engineer
+  overview: You are a seasoned engineer. You know the best practices. You work with systems of backend API and frontend applications. You know when, and how to make things scale. You are experienced in server infrastructure, database administration, software design, implementation, refactoring, testing, DevOps. You feel this list inadequate to describe your competency.
+  sections:
+    - name: Responsibilities
+      items:
+        - Improve the stability, reliability and security of our server application
+        - Bring in best practices in API design and server-client communication
+        - Design and implement new features in our Rails app
+        - Scale the system
+    - name: Requirements
+      items:
+        - At least 3 years of experience in a major Internet company
+        - Experience of developing rapidly-scalable system
+        - Potential to become VP Engineering
+    - name: Skills
+      items:
+        - Ruby on Rails, Heroku, Amazon Web Services, SQL, Load Balancing
+        - Familiarity with full-stack system design, including server infrastructure, backend implementation, iOS/Android engineering
+- name: ios-engineer
+  title: iOS Engineer
+  overview: You are a perfectionist. You code fast. You code with style. You come up with solutions quick, but also focus on every bit of detail. You see user experience as the spirit of your app, and you would go at all costs to make your app beautiful, smooth, and robust.
+  sections:
+    - name: Responsibilities
+      items:
+        - Architect and implement new features of our app
+        - Refactor and maintain existing features
+        - Bring in iOS best practices and design patterns
+        - Improve stability and troubleshoot issues in production
+        - Work with our designers to improve every bit of detail in UI: an animation, an alert message, anything
+    - name: What we are looking for
+      items:
+        - At least 2 years of experience in iOS development
+        - Deep understanding of Objective-C and Cocoa Touch framework
+        - Experience with developing API client application
+        - Familiarity with Swift and latest iOS 8 APIs
+    - name: Skills
+      items:
+        - Objective-C, Swift, C (for optimization)
+        - XCode, Instruments, Git
+- name: android-lead
+  title: Android Lead Engineer
+  overview: You are a perfectionist. You code fast. You code with style. You come up with solutions quick, but also focus on every bit of detail. You see user experience as the spirit of your app, and you would go at all costs to make your app beautiful, smooth, and robust.
+  sections:
+    - name: Responsibilities
+      items:
+        - Build our Android app
+        - Bring in Android best practices and design patterns
+        - Improve stability and troubleshoot issues in production
+        - Work with our designers to create a beautiful UI - down to every bit of detail
+    - name: What we are looking for
+      items:
+        - At least 2 years of experience in Android development
+        - Experience of independently developing API client application
+- name: devops
+  title: DevOps Engineer
+  sections:
+    - name: Responsibilities
+      items:
+        - Migrate our server app from Heroku to Amazon Web Services
+        - Administrate our PostgreSQL database
+        - Maintain server load balancing
+        - Architect and maintain a server system with nodes in US and China
+- name: user-acquisition-manager
+  title: User Acquisition Manager (Campus/Part-time)
+  overview: You are a college student eager to share the fun of SketchMe with your entire campus. You have creativity to come up with genius marketing plans. Then you can execute on your plans to guide your fellow classmates into the wonderful world of SketchMe.  You are not some campus ambassador who is just there to hand out swags. You are part of our team. You come up with brilliant strategies and execute on them. You are our growth hacker, our user acquisition guru.
+  sections:
+    - name: Responsibilities
+      items:
+        - Form user acquisition strategies at your campus with us (yes, you are not alone)
+        - Execute on those strategies with us (yes, we have your back)
+        - Develop user-retention strategies to keep the scene alive.
+    - name: What we are looking for
+      items:
+        - Currently enrollment in college
+        - Active involvement in the campus community
+        - Experience in conducting marketing campaigns
+        - Creativity
+        - Execution

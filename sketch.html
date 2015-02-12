@@ -1,0 +1,64 @@
+---
+layout: default
+identifier: sketch
+noindex: true
+scripts:
+ - jquery.bxslider.min
+ - jquery.mask.min
+ - sketch
+---
+<div class="ios-link">
+    <a target="_blank" href="https://itunes.apple.com/us/app/sketchoff/id806820979?mt=8" id="ios" class="ios"></a>
+</div>
+<a class="share share-fb" href="#" onclick="FB.ui({method: 'share', href: 'https://api.sketch-off.com/sketches/10-drafts-with-1gb-psd-file-now-you-say-you-want-to-redo'}, function(r){});"></a>
+<a class="share share-twitter" href="#" onclick="window.open('http://twitter.com/intent/tweet?text=hello&url=http://sketch-off.com', '', 'height=300,width=500')"></a>
+<a class="share share-email" href="mailto:?subject=SketchOff&body=https://api.sketch-off.com/sketches/10-drafts-with-1gb-psd-file-now-you-say-you-want-to-redo"></a>
+<section class="welcome" id="welcome">
+    <div class="container-fluid">
+        <div class="logo hidden-xs">
+            <a href="/"><h1 class="brand-title">SketchOff</h1></a>
+            <p class="brand-description">Where your storyboard is put together by your friends.</p>
+        </div>
+        <div class="sketch-card container">
+            <div class="col-md-4 col-xs-12 sketch-main">
+                <img src="http://s3-us-west-2.amazonaws.com/sketch-off/2/20140712_002842842_p.jpg" alt="Steals apples from dining hall every fxxking day" class="sketch-img">
+                <div class="sketch-overlay">
+                    <div class="down-count vote-count">3 <span class="down-arrow arrow"></span></div>
+                    <div class="up-count vote-count"><span class="up-arrow arrow"></span> 12</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12 sketch-aside">
+                <div class="letter">
+                    <p>Dear Roger,<br /><br /></p>
+                    <p>I just sketched you!</p>
+                    <p>Now join me on SketchOff and start capturing our friends’ legendary moments.</p>
+                    <p>SketchOff is an app where your storyboard is put together by your friends. Here:</p>
+                    <div class="sign-up hidden-xs">
+                        <div class="input-group">
+                            <div class="input-group-addon">+1</div>
+                            <input type="text" class="form-control" id="input-text" placeholder="Phone number" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" id="btn-submit">Get download link</button>
+                            </span>
+                        </div>
+                        <div class="output" id="output"></div>
+                    </div>
+                    <div class="inline-appstore">
+                        <a target="_blank" href="https://itunes.apple.com/us/app/sketchoff/id806820979?mt=8" id="appstore" class="appstore"></a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <p><span class="emphasize">You’ve got 24 hours to sketch 3 friends. <br /> Get creative!</span></p>
+                    <p><br />Reve</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=173131616224910&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
