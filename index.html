@@ -2,47 +2,21 @@
 layout: default
 identifier: home
 scripts:
- - jquery.bxslider.min
  - jquery.mask.min
  - index
 ---
-<section class="intro" id="intro">
-    <div class="container-fluid">
-        <div class="logo">
-            <h1 class="brand-title">SketchMe</h1>
-        </div>
-        <div class="">
-            <a target="_blank" href="https://itunes.apple.com/us/app/sketchoff/id806820979?mt=8">
-                <div class="appstore" id="appstore"></div>
-            </a>
-        </div>
-        <div class="headline">Capture your friends&rsquo; legendary moments</div>
-        <div class="sign-up">
-            <div class="input-group">
-                <div class="input-group-addon">+1</div>
-                <input type="text" class="form-control" id="input-text" placeholder="Phone number" />
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="btn-submit">Get download link</button>
-                </span>
-            </div>
-            <div class="output" id="output"></div>
-        </div>
-        <div class="mockup"></div>
-    </div>
-</section>
-<section class="sketches" id="hot-sketches">
-    <div class="container-fluid">
-        <div class="row">
-            {% for sketch in site.data.sketches %}
-            <div class="sketch">
-                <img class="sketch-img" src="http://s3-us-west-2.amazonaws.com/sketch-off/{{ sketch.url }}" alt="{{ sketch.content }}" />
-            </div>
-            {% endfor %}
+
+<header>
+    <div class="container">
+        <div class="app-logo"></div>
+        <h1>SketchMe</h1>
+        <div class="description">Your timeline put together by your <span class="emphasize">best friends</span></div>
+        <div class="app-links">
+            <a class="app-store-link" href="/appstore">Get it on App Store</a>
+            <div class="android-link">Coming soon to Android</div>
         </div>
     </div>
-</section>
-<section class="storyboard">
-    <div class="container-fluid">
-        <p>Where your storyboard is put together by your friends</p>
-    </div>
+</header>
+<section class="intro">
+    hello
 </section>

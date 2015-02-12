@@ -1,13 +1,10 @@
-name: SketchOff
+name: SketchMe
 exclude:
  - Gemfile
  - Gemfile.lock
  - Guardfile
- - sketch-off-landing.sublime-project
- - sketch-off-landing.sublime-workspace
- - README.md
  - deploy.sh
- - mask.psd
+ - README.md
 sass:
     sass_dir: assets/css
     style: :compressed
