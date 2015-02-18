@@ -92,15 +92,6 @@ $navbar-height: 80px;
 }
 
 footer {
-    .cover {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        left: 0;
-        bottom: 0;
-        background-color: white;
-        z-index: 200;
-    }
     padding: 30px 0 15px 0;
     .footer-text {
         text-align: center;
@@ -124,7 +115,7 @@ footer {
     header {
         background-color: $yellow;
         height: 100vh;
-        min-height: 600px;
+        min-height: 700px;
         .app-logo {
             height: 120px;
             width: 120px;
@@ -147,6 +138,7 @@ footer {
         }
         .app-links {
             margin: 0 auto;
+            margin-top: 60px;
             text-align: center;
             font-size: 18px;
             font-weight: 700;
@@ -168,67 +160,95 @@ footer {
             left: 0;
             right: 0;
             margin: 0 auto;
-        }
-        .cover {
-            width: 100%;
-            height: 220px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            background-color: $yellow;
-            z-index: 200;
+            @include scr(xs) { display: none; }
         }
     }
     .intro {
         background-color: $red;
-        height: 100vh;
-        min-height: 880px;
+        @include scr(xs) {
+            min-height: 560px;
+        }
+        @include scr(md) {
+            min-height: 903px;
+            height: 100vh;
+        }
         h2 {
-            font-size: 32px;
             line-height: 1.6em;
             color: white;
-            @include scr(xs) { text-align: right; }
+            @include scr(xs) {
+                font-size: 22px;
+                text-align: right;
+            }
             @include scr(md) {
+                font-size: 32px;
                 text-align: left;
                 margin-top: 40%;
             }
         }
-        .timeline {
-            z-index: 100; // lower than header
-            width: 420px;
-            height: 1000px;
+        .headline-container {
+            float: right;
+        }
+        .timeline-container {
             position: relative;
-            top: -440px;
+            padding: 0;
+        }
+        .timeline {
+            @include scr(xs) { width: 100%; }
+            @include scr(md) { width: 440px; }
+            position: absolute;
+            top: 0;
             .timeline-item {
                 clear: both;
-                height: 220px;
+                @include scr(xs) {
+                    font-size: 14px;
+                    padding: 20px 15px 20px 0;
+                }
+                @include scr(md) {
+                    height: 220px;
+                    font-size: 18px;
+                }
                 .description {
                     float: left;
                     color: white;
-                    font-size: 18px;
                     line-height: 1.5em;
                     text-align: right;
-                    margin-top: 40px;
                     figcaption {
                         font-weight: 600;
+                    }
+                    @include scr(xs) {
+                        margin-top: 20px;
+                        width: 55%;
+                    }
+                    @include scr(md) {
+                        margin-top: 40px;
+                        width: 200px;
                     }
                 }
                 .picture {
                     z-index: 0;
                     float: right;
                     .timeline-pic {
-                        width: 204px;
-                        height: 203px;
+                        @include scr(xs) {
+                            width: 110px;
+                            height: 110px;
+                        }
+                        @include scr(md) {
+                            width: 204px;
+                            height: 203px;
+                        }
                     }
-                }
-                .timeline-placeholder-pic {
-                    width: 440px;
-                    height: 204px;
                 }
                 &.placeholder {
                     float: right;
+                    @include scr(xs) { display: none; }
                     img {
-                        // float
+                        width: 440px;
+                    }
+                    &.top {
+                        height: 138px;
+                    }
+                    &.bottom {
+                        height: 125px;
                     }
                 }
             }
