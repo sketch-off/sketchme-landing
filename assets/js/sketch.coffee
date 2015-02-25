@@ -34,24 +34,6 @@ renderMode = ->
         $android.removeClass 'active'
         $prefix.show()
 
-slider = $('.bxslider').bxSlider
-    mode: 'fade'
-    controls: false
-    pager: false
-    auto: true
-    pause: 3000
-    onSlideNext: (_, o, n) -> slideChange(o, n)
-    onSlidePrev: (_, o, n) -> slideChange(o, n)
-
-slideChange = (oldIndex, newIndex) ->
-    $($boxes[oldIndex]).removeClass 'active'
-    $($boxes[newIndex]).addClass 'active'
-
-$boxes.click ->
-    slider.goToSlide this.dataset.index
-    $boxes.removeClass 'active'
-    $(this).addClass 'active'
-
 $('#appstore').click (e) ->
     # if iOS, allow link
     if submit_mode == modes.ADR

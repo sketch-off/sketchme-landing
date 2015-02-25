@@ -58,7 +58,7 @@
     .logo {
         width: $s-logo-size;
         height: $s-logo-size;
-        background-image: url("../img/sketch-off-logo-shadow.png");
+        background-image: url("../img/app-logo-shadow.png");
         padding: 2px 0 0 ($s-logo-size + 0px);
         @include scr(md) { margin: 20px 0; }
         @include scr(xs) { margin: 20px 0; }
