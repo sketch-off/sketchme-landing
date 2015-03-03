@@ -2,56 +2,56 @@
 layout: default
 identifier: sketch
 noindex: true
+navbar: false
 scripts:
- - jquery.bxslider.min
  - jquery.mask.min
  - sketch
 ---
-<div class="ios-link">
-    <a target="_blank" href="https://itunes.apple.com/us/app/sketchme-know-thy-friends/id806820979?mt=8" id="ios" class="ios"></a>
-</div>
 <a class="share share-fb" href="#" onclick="FB.ui({method: 'share', href: 'https://api.sketch-off.com/sketches/10-drafts-with-1gb-psd-file-now-you-say-you-want-to-redo'}, function(r){});"></a>
 <a class="share share-twitter" href="#" onclick="window.open('http://twitter.com/intent/tweet?text=hello&url=http://sketchme.co', '', 'height=300,width=500')"></a>
 <a class="share share-email" href="mailto:?subject=SketchMe&body=https://api.sketch-off.com/sketches/10-drafts-with-1gb-psd-file-now-you-say-you-want-to-redo"></a>
 <section class="welcome" id="welcome">
     <div class="container-fluid">
         <div class="logo hidden-xs">
-            <a href="/"><h1 class="brand-title">SketchMe</h1></a>
-            <p class="brand-description">Where your storyboard is put together by your friends.</p>
+            <a class="app-title" href="/">SketchMe <span class="description">| Know Thy Friends</span></a>
         </div>
-        <div class="sketch-card container">
-            <div class="col-md-4 col-xs-12 sketch-main">
-                <img src="http://s3-us-west-2.amazonaws.com/sketch-off/2/20140712_002842842_p.jpg" alt="Steals apples from dining hall every fxxking day" class="sketch-img">
+
+        <div class="sketch-detail col-md-4 col-md-offset-4 col-xs-12">
+
+            <div class="sketch-main">
+                <img src="http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/0nHxYlrFTEGEQSAogklO2Q_p.jpg" alt="Says \"I need to lose weight\" and drinks 5 cartons of milk" class="sketch-img">
                 <div class="sketch-overlay">
                     <div class="down-count vote-count">3 <span class="down-arrow arrow"></span></div>
                     <div class="up-count vote-count"><span class="up-arrow arrow"></span> 12</div>
+                    <div class="time-label">1 minutes ago</div>
                 </div>
             </div>
-            <div class="col-md-6 col-xs-12 sketch-aside">
-                <div class="letter">
-                    <p>Dear Roger,<br /><br /></p>
-                    <p>I just sketched you!</p>
-                    <p>Now join me on SketchOff and start capturing our friends’ legendary moments.</p>
-                    <p>SketchOff is an app where your storyboard is put together by your friends. Here:</p>
-                    <div class="sign-up hidden-xs">
-                        <div class="input-group">
-                            <div class="input-group-addon">+1</div>
-                            <input type="text" class="form-control" id="input-text" placeholder="Phone number" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button" id="btn-submit">Get download link</button>
-                            </span>
+            <div class="sketch-votes" id="sketch-upvotes">
+                <div class="votes-label">upvotes</div>
+                <div class="votes">
+                    {% for i in (1..15) %}
+                        <div class="user">
+                            <img src="http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/cz_chJwXSTGWye8q4AFa2A_t.jpg" class="user-avatar"></img>
+                            <div class="user-name">Frank</div>
                         </div>
-                        <div class="output" id="output"></div>
-                    </div>
-                    <div class="inline-appstore">
-                        <a target="_blank" href="https://itunes.apple.com/us/app/sketchme-know-thy-friends/id806820979?mt=8" id="appstore" class="appstore"></a>
-                        <div class="clearfix"></div>
-                    </div>
-                    <p><span class="emphasize">You’ve got 24 hours to sketch 3 friends. <br /> Get creative!</span></p>
-                    <p><br />Reve</p>
+                    {% endfor %}
                 </div>
+                <hr>
+            </div>
+            <div class="sketch-votes-container" id="sketch-downvotes">
+                <div class="votes-label">downvotes</div>
+                <div class="votes">
+                    {% for i in (1..6) %}
+                        <div class="user">
+                            <img src="http://s3-us-west-2.amazonaws.com/delta-epsilon/sketches/cz_chJwXSTGWye8q4AFa2A_t.jpg" class="user-avatar"></img>
+                            <div class="user-name">Frank</div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <hr>
             </div>
         </div>
+
     </div>
 </section>
 <div id="fb-root"></div>

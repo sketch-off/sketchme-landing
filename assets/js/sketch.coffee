@@ -55,8 +55,14 @@ $btnSubmit.click ->
 
 $ ->
     renderMode()
-    $main = $('.sketch-main')
-    $main.css 'height': $main.width()
+    equalHeightWidth $('.sketch-main')
+    equalHeightWidth $('.sketch-overlay')
+    w = $('.sketch-detail').width()
+    console.log w
+    $('.sketch-img').width w
+
+equalHeightWidth = ($e) ->
+    $e.css 'height': $e.width()
 
 submitPhone = ->
     $output.slideUp()

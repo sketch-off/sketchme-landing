@@ -10,3 +10,9 @@ sass:
     style: :compressed
 coffee:
     style: :compressed
+defaults:
+    -
+        scope:
+            path: ''
+        values:
+            navbar: true

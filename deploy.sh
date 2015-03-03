@@ -10,3 +10,4 @@ echo "$(tput setaf 2)Configuring redirections... $(tput sgr0)"
 APPSTORE_URL="https://itunes.apple.com/us/app/sketchme-know-thy-friends/id806820979?mt=8"
 aws s3api put-object --bucket $BUCKET --key appstore/index.html --region $REGION --content-type "text/html" --website-redirect-location $APPSTORE_URL
 aws s3api put-object --bucket $BUCKET --key AppStore/index.html --region $REGION --content-type "text/html" --website-redirect-location $APPSTORE_URL
+aws s3api put-object --bucket $BUCKET --key about-us-app/index.html --region $REGION --content-type "text/html" --website-redirect-location /about

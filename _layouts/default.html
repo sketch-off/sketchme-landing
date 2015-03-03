@@ -18,7 +18,9 @@
     </head>
     <body>
         <div class="{{ page.identifier }}-container">
-            {% include navbar.html %}
+            {% if page.navbar %}
+                {% include navbar.html %}
+            {% endif %}
             {{ content }}
             {% include footer.html %}
         </div> <!-- /{{ page.identifier }}-container -->

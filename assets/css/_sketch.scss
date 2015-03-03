@@ -3,21 +3,6 @@
 // ----------------------------
 
 .sketch-container {
-    .ios-link {
-        position: absolute;
-        top: 60px;
-        right: 60px;
-    }
-    .ios {
-        @extend .hidden-xs;
-        height: 50px;
-        width: 100px;
-        display: block;
-        border: 1px solid $red;
-        margin: 0;
-        background-image: url("../img/iOS.png");
-        background-size: 100%;
-    }
     .share {
         @extend .hidden-xs;
         position: absolute;
@@ -39,14 +24,9 @@
         top: 360px;
         background-image: url("../img/icon-email.png");
     }
-    background-color: $white;
-    background: url("../img/sketch-bg.png");
-    @media (min-width: 1000px) {
-        height: 100vh;
-    }
+    background-image: url('../img/sketchme-pattern.png');
+    background-color: $yellow;
     .welcome {
-        max-height: 1280px;
-        min-height: 580px;
         @include nav-color($white);
         .navbar-brand { display: none; }
         @include scr(md) { padding: 10px 0 20px 0; }
@@ -54,146 +34,135 @@
     .container-fluid {
         @include scr(xs) { padding: 0; }
     }
-    $s-logo-size: 80px;
     .logo {
-        width: $s-logo-size;
-        height: $s-logo-size;
+        height: 40px;
+        width: 300px;
         background-image: url("../img/app-logo-shadow.png");
-        padding: 2px 0 0 ($s-logo-size + 0px);
-        @include scr(md) { margin: 20px 0; }
-        @include scr(xs) { margin: 20px 0; }
+        background-repeat: no-repeat;
+        background-size: 40px auto;
+        padding: 2px 0 0 40px;
     }
-    .brand-title {
-        font-size: 24px;
-        color: $red;
-        margin: 16px 0 4px 0;
+    .app-title {
+        color: black;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 40px;
+        .description {
+            font-weight: 400;
+        }
+        &:hover, &:focus {
+            text-decoration: none;
+        }
     }
-    .brand-description {
-        width: 400px;
-        margin: 0;
-        font-size: 13px;
-    }
-    $card-width: 840px;
-    .sketch-card {
+    $sketch-width: 360px;
+    $sketch-size: $sketch-width - 4px;
+    .sketch-detail {
+        @include scr(md) {
+            margin-top: 40px;
+        width: $sketch-width;
+        }
+        @include scr(xs) {
+            width: 100vw;
+        }
         background-color: $white;
-        @media (min-width: $card-width + 1px) {
-            border: 2px solid $red;
-            padding: 6px 0 0 30px;
-            margin: 150px auto 0 auto;
-            width: $card-width;
-            height: 400px;
-        }
-        @media (max-width: $card-width) {
-            width: 100%;
-            padding: 0;
-            margin-right: 0;
-        }
+        padding: 2px;
+        box-shadow: 1px 2px 6px 0px #999;
     }
-    $sketch-size: 340px;
     .sketch-main {
         height: auto;
         @include scr(md) {
             max-height: $sketch-size;
             max-width: $sketch-size;
             width: 100%;
-            margin: 20px 0;
-        }
-        @include scr(xs) {
-            max-height: $sketch-size * 1.5;
-            max-width: $sketch-size * 1.5;
-            width: 100vw;
-            margin-bottom: 20px;
         }
         padding: 0;
     }
     .sketch-img {
-        width: 100%;
+        width: $sketch-size;
         height: auto;
-        box-shadow: 1px 2px 6px 0px #333;
+        border-radius: 2px;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 2px;
+        left: 2px;
     }
     .sketch-overlay {
         width: 100%;
         height: 100%;
-        background-image: url("../img/sketch-frame.png");
-        background-size: contain;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 2px;
+        left: 2px;
+    }
+    .time-label {
+        font-weight: 300;
+        color: white;
+        font-size: 10px;
+        position: absolute;
+        bottom: 16px;
+        width: 100%;
+        text-align: center;
     }
     .vote-count {
-        font-family: "HelveticaNeue-CondensedBold", inherit;
+        font-weight: 600;
         color: white;
-        font-size: 40px;
+        font-size: 20px;
         position: absolute;
         bottom: 12px;
     }
     .up-count {
-        right: 8%;
+        right: 5%;
     }
     .down-count {
-        left: 8%;
+        left: 5%;
     }
     .up-arrow {
-        background-image: url("../img/arrow-up.png");
-        right: 133%;
+        background-image: url("../img/IconVoteUpFill.png");
+        right: -20%;
     }
     .down-arrow {
-        background-image: url("../img/arrow-down.png");
-        left: 150%;
+        background-image: url("../img/IconVoteDownFill.png");
+        left: -80%;
     }
     .arrow {
-        width: 34px;
-        height: 20px;
+        width: 31px;
+        height: 30px;
         background-size: contain;
         position: absolute;
-        bottom: 33%;
+        bottom: 120%;
     }
-    .sketch-aside {
-        padding: 0;
-        @include scr(md) { margin: 20px 0 0 30px; }
-        @include scr(xs) { padding: 10px 20px; }
-    }
-    .sign-up {
-        margin: 20px 0;
-        width: 110%;
-        .input-group {
-            border: 2px solid $red;
-            padding: 0;
-        }
-        .input-group-addon {
-            color: $red;
-        }
-        .input-group-btn button {
+    .sketch-votes {
+        min-height: 40px;
+        hr {
+            border-color: #ccc;
+            position: relative;
+            left: -2px;
+            width: $sketch-width;
             margin: 0;
-            width: 130px;
-            background-color: $red;
-            &:hover, &:focus {
-                background-color: darken($red, 5%);
-            }
-        }
-        input {
-            @include placeholder();  // default
         }
     }
-    .output {
-        color: $red;
+    .votes-label {
+        margin: 8px 0 0 16px;
     }
-    .inline-appstore {
-        @include scr(md) { display: none; }
-        margin: 20px 0;
+    .votes {
+        float: left;
+        margin: 8px 4px;
     }
-    .letter {
-        @include scr(md) { width: 340px; }
-        p {
-            font-size: 16px;
-            line-height: 18px;
-            color: #38454F;
-            .emphasize {
-                font-weight: 700;
-            }
-        }
+    $avatar-size: 40px;
+    .user {
+        float: left;
+        width: $avatar-size + 16px;
+        padding: 6px 8px;
     }
+    .user-avatar {
+        border-radius: 50%;
+        width: $avatar-size;
+        height: $avatar-size;
+    }
+    .user-name {
+        padding-top: 2px;
+        width: $avatar-size;
+        text-align: center;
+        font-size: 10px;
+    }
+
+
 }
