@@ -59,6 +59,7 @@ $ ->
     equalHeightWidth $('.sketch-overlay')
     w = $('.sketch-detail').width()
     $('.sketch-img').width w
+    $('.sketch-votes hr').width w
 
 equalHeightWidth = ($e) ->
     $e.css 'height': $e.width()

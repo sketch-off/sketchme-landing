@@ -3,8 +3,11 @@
 // ----------------------------
 
 .sketch-container {
+    background-image: url('../img/sketchme-pattern.png');
+    background-color: $yellow;
+    @include scr(md) { padding: 10px 0 20px 0; }
     .share {
-        @extend .hidden-xs;
+        @include scr(xs) { display: none; }
         position: absolute;
         left: 48px;
         height: 48px;
@@ -24,17 +27,23 @@
         top: 360px;
         background-image: url("../img/icon-email.png");
     }
-    background-image: url('../img/sketchme-pattern.png');
-    background-color: $yellow;
-    .welcome {
-        @include nav-color($white);
-        .navbar-brand { display: none; }
-        @include scr(md) { padding: 10px 0 20px 0; }
-    }
     .container-fluid {
         @include scr(xs) { padding: 0; }
     }
+    .app-banner {
+        @include scr(md) { display: none; }
+        text-align: center;
+        padding: 20px 0;
+        a {
+            color: black;
+            font-size: 16px;
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+        }
+    }
     .logo {
+        @include scr(xs) { display: none; }
         height: 40px;
         width: 300px;
         background-image: url("../img/app-logo-shadow.png");
@@ -158,6 +167,7 @@
         height: $avatar-size;
     }
     .user-name {
+        color: black;
         padding-top: 2px;
         width: $avatar-size;
         text-align: center;
