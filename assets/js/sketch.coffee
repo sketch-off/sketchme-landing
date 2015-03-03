@@ -58,7 +58,6 @@ $ ->
     equalHeightWidth $('.sketch-main')
     equalHeightWidth $('.sketch-overlay')
     w = $('.sketch-detail').width()
-    console.log w
     $('.sketch-img').width w
 
 equalHeightWidth = ($e) ->
