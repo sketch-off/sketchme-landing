@@ -7,6 +7,7 @@ $blue: #277fff;
 $lightblue: #08baf9;
 $gray: #2b2b2b;
 $white: #f8f8f8;
+$dark: #333333;
 
 $input-border-focus: $red;
 $navbar-height: 80px;
@@ -111,22 +112,24 @@ footer {
 
 .home-container {
     @include nav-color($yellow, black);
-
     header {
         background-color: $yellow;
+    }
+    .header {
+        padding-top: 160px;
         height: 100vh;
-        min-height: 700px;
+        min-height: 500px;
+        $logo-size: 100px;
         .app-logo {
-            height: 120px;
-            width: 120px;
-            margin: 0 auto 40px auto;
-            margin-top: 160px;
+            height: $logo-size;
+            width: $logo-size;
+            margin: 0 auto;
         }
         h1 {
-            font-size: 64px;
+            font-size: 56px;
             font-weight: 300;
             text-align: center;
-            margin-bottom: 30px;
+            margin: 30px 0 20px 0;
         }
         .description {
             font-size: 20px;
@@ -140,8 +143,8 @@ footer {
             margin: 0 auto;
             margin-top: 60px;
             text-align: center;
-            font-size: 18px;
-            font-weight: 700;
+            font-size: 16px;
+            font-weight: 600;
             .app-store-link {
                 color: black;
             }
@@ -149,6 +152,61 @@ footer {
                 margin-top: 20px;
                 color: rgba(0,0,0,.4);
             }
+        }
+        .sign-up {
+            margin: 0 auto;
+            @include scr(xs) {
+                // width: 100%;
+                // margin-top: 40px;
+                display: none;
+            }
+            @include scr(md) {
+                width: 480px;
+                margin-top: 30px;
+            }
+            .input-group {
+                height: 40px;
+            }
+            .input-group-addon {
+                background-color: white;
+                color: $dark;
+                padding-right: 8px;
+                border: 2px $dark solid;
+                border-right-width: 0;
+                font-size: 18px;
+            }
+            input {
+                color: black;
+                font-size: 18px;
+                padding-left: 12px;
+                background-color: white;
+                @include placeholder($dark);
+                &:focus {
+                    border-color: $dark;
+                    outline: 0;
+                    @include box-shadow(none);
+                }
+                border: 2px $dark solid;
+                border-left-width: 0;
+                border-right-width: 0;
+                height: 41px;
+            }
+            button {
+                font-size: 18px;
+                background-color: $red;
+                border: 2px $dark solid;
+                color: $white;
+                // width: 140px;
+                &:hover, &:focus {
+                    background-color: darken($red, 5%);
+                    color: $white;
+                }
+            }
+        }
+        .output {
+            color: $dark;
+            font-weight: 200;
+            margin-top: 10px;
         }
         .arrow-down {
             background: url('../img/btn-arrow-down.png') no-repeat;

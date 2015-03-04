@@ -6,10 +6,20 @@ scripts:
  - index
 ---
 <header>
-    <div class="container">
+    <div class="header container">
         <div class="app-logo"></div>
         <h1>SketchMe</h1>
         <div class="description">Your timeline put together by your <span class="emphasize">best friends</span></div>
+        <div class="sign-up">
+            <div class="input-group">
+                <div class="input-group-addon">+1</div>
+                <input type="text" class="form-control" id="input-text" placeholder="Phone number" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" id="btn-submit">Get download link</button>
+                </span>
+            </div>
+            <div class="output" id="output"></div>
+        </div>
         <div class="app-links">
             <a class="app-store-link" href="/appstore">Get it on the App Store</a>
             <div class="android-link">Coming soon to Android</div>
