@@ -26,7 +26,7 @@ renderMode = ->
         $appstore.removeClass 'active'
         $prefix.hide()
     else if submit_mode == modes.iOS
-        $btnSubmit.html 'Get download link'
+        $btnSubmit.html 'Get the app'
         $input.attr 'placeholder', 'Phone number'
         $input.mask '(000) 000-0000'
         $input.val ''
@@ -79,7 +79,7 @@ submitPhone = ->
                 $output.html 'Error occured when we attempted to text you.'
             $output.slideDown()
         success: (xhr) ->
-            $output.html 'Great! Now download SketchOff on your phone!'
+            $output.html 'Great! Now download SketchMe on your phone!'
             $output.slideDown()
 
 submitEmail = ->

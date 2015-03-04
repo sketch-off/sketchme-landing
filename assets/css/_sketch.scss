@@ -63,12 +63,25 @@
             text-decoration: none;
         }
     }
+    .sign-up {
+        width: 380px;
+        margin: 0 auto;
+        * {
+            font-size: 15px;
+        }
+        .input-group {
+            height: 36px;
+        }
+        input {
+            height: 37px;
+        }
+    }
     $sketch-width: 360px;
     $sketch-size: $sketch-width - 4px;
     .sketch-detail {
         @include scr(md) {
-            margin-top: 40px;
-        width: $sketch-width;
+            margin-top: 20px;
+            width: $sketch-width;
         }
         @include scr(xs) {
             width: 100vw;

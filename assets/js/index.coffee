@@ -74,7 +74,7 @@ submitPhone = ->
                 $output.html 'Error occured when we attempted to text you.'
             $output.slideDown()
         success: (xhr) ->
-            $output.html 'Great! Now download SketchOff on your phone!'
+            $output.html 'Great! Now download SketchMe on your phone!'
             $output.slideDown()
 
 submitEmail = ->
