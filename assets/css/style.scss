@@ -169,14 +169,14 @@ footer {
         padding-top: 160px;
         height: 100vh;
         min-height: 500px;
-        $logo-size: 100px;
+        $logo-size: 120px;
         .app-logo {
             height: $logo-size;
             width: $logo-size;
             margin: 0 auto;
         }
         h1 {
-            font-size: 56px;
+            font-size: 52px;
             font-weight: 300;
             text-align: center;
             margin: 30px 0 20px 0;
@@ -387,6 +387,12 @@ footer {
     p {
         text-indent: 2em;
         line-height: 1.6em;
+        a {
+            color: inherit;
+            &:hover, &:focus {
+                text-decoration: none;
+            }
+        }
     }
     .main-article {
         padding-top: 50px;
