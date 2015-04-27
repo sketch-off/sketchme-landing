@@ -56,8 +56,6 @@ $btnSubmit.click ->
 
 $ ->
     renderMode()
-    h = $(window).height()
-    $('.header').css 'padding-top', (h-400)/2
 
 submitPhone = ->
     $output.slideUp()

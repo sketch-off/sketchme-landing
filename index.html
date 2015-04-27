@@ -4,70 +4,33 @@ identifier: home
 scripts:
  - jquery.mask.min
  - index
+navbar: false
 ---
-<header>
-    <div class="header container">
+<header class="header">
+    <div class="container-fluid header-container">
         <div class="app-logo"></div>
-        <h1>SketchMe</h1>
-        <div class="description">Have your <span class="emphasize">best friends</span> capture your stories</div>
-        <div class="sign-up">
-            <div class="input-group">
-                <div class="input-group-addon">+1</div>
-                <input type="text" class="form-control" id="input-text" placeholder="Phone number" />
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" id="btn-submit">Get download link</button>
-                </span>
-            </div>
-            <div class="output" id="output"></div>
+        <div class="title">SketchMe</div>
+        <div class="download-links">
+            <a href="/appstore">
+                <div class="download download-ios"></div>
+            </a>
+            <div class="download download-android"></div>
         </div>
-        <div class="app-links">
-            <a class="app-store-link" href="/appstore">Get it on the App Store</a>
-            <div class="android-link">Coming soon to Android</div>
-        </div>
-        <div class="arrow-down"></div>
     </div>
 </header>
 <section class="intro" id="intro">
-    <div class="container">
-        <div class="headline-container col-md-6 col-xs-12">
-            <h2>Your stories<br>Captured by your friends</h2>
+    <div class="container-fluid">
+        <div class="col-sm-4 col-xs-12 slide" id="slide-1">
+            <h2>A sketch is <br>a moment of your friend</h2>
+            <img src="assets/img/slide-1.png" class="img-responsive img-sketch">
         </div>
-        <div class="timeline-container col-md-6 col-xs-12">
-            <div class="timeline">
-                <div class="timeline-item placeholder top">
-                    <img src="assets/img/roger-top-placeholder.png">
-                </div>
-                <div class="timeline-item">
-                    <div class="description">
-                        <figcaption>“Nothing suits him <br>like a suit”</figcaption>
-                        <div class="author">by Angela</div>
-                    </div>
-                    <figure class="picture">
-                        <img src="assets/img/roger-1.png" class="timeline-pic">
-                    </figure>
-                </div>
-                <div class="timeline-item">
-                    <div class="description">
-                        <figcaption>“Dance like <br>nobody’s watching”</figcaption>
-                        <div class="author">by Ryan</div>
-                    </div>
-                    <figure class="picture">
-                        <img src="assets/img/roger-2.png" class="timeline-pic">
-                    </figure>
-                </div>
-                <div class="timeline-item">
-                    <div class="description">
-                        <figcaption>“Stood up 30 investors <br>at the demo day for <br>a set of tennis”</figcaption>
-                        <div class="author">by Sara</div>
-                    </div>
-                    <figure class="picture">
-                        <img src="assets/img/roger-3.png" class="timeline-pic">
-                    </figure>
-                </div>
-                <div class="timeline-item placeholder bottom">
-                    <img src="assets/img/roger-bottom-placeholder.png">
-                </div>
-            </div>
+        <div class="col-sm-4 col-xs-12 slide" id="slide-2">
+            <h2>Sketch your friend</h2>
+            <img src="assets/img/slide-2.png" class="img-responsive img-sketch">
+        </div>
+        <div class="col-sm-4 col-xs-12 slide" id="slide-3">
+            <h2>Let your friends sketch you</h2>
+            <img src="assets/img/slide-3.png" class="img-responsive img-phone">
         </div>
     </div>
 </section>

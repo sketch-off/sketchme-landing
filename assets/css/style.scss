@@ -3,6 +3,8 @@
 
 $red: #e64c3c;
 $yellow: #f9e900;
+$gold: #F39C12;
+$orange: #f37d33;
 $blue: #277fff;
 $lightblue: #08baf9;
 $gray: #2b2b2b;
@@ -161,150 +163,93 @@ footer {
 // --------------------
 
 .home-container {
-    @include nav-color($yellow, black);
-    header {
-        background-color: $yellow;
+    $header-height: 80px;
+    .header-container {
+        padding: 0;
+    }
+    .header-container * {
+        @include scr(md) { float: left; }
     }
     .header {
-        padding-top: 160px;
-        height: 100vh;
-        min-height: 500px;
-        $logo-size: 120px;
-        .app-logo {
-            height: $logo-size;
-            width: $logo-size;
-            margin: 0 auto;
-        }
-        h1 {
-            font-size: 52px;
-            font-weight: 300;
-            text-align: center;
-            margin: 30px 0 20px 0;
-        }
-        .description {
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            .emphasize {
-                color: $red;
-            }
-        }
-        .app-links {
-            margin: 0 auto;
-            margin-top: 60px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: 600;
-            .app-store-link {
-                color: black;
-            }
-            .android-link {
-                margin-top: 20px;
-                color: rgba(0,0,0,.4);
-            }
-        }
-        .arrow-down {
-            background: url('../img/btn-arrow-down.png') no-repeat;
-            background-size: contain;
-            height: 33px;
-            width: 33px;
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            @include scr(xs) { display: none; }
+        height: $header-height;
+    }
+    $logo-size: 60px;
+    $logo-size-xs: 150px;
+    .app-logo {
+        @include scr(md) { height: $logo-size; width: $logo-size; }
+        @include scr(xs) { height: $logo-size-xs; width: $logo-size-xs; }
+        @include scr(md) { margin: 10px 20px; }
+        @include scr(xs) { margin: 40px auto 10px auto; }
+    }
+    .title {
+        color: $dark;
+        line-height: $header-height;
+        @include scr(md) { font-size: 34px; margin: 0; }
+        @include scr(xs) { font-size: 40px; margin: 0 auto; width: 180px; }
+    }
+    .download-links {
+        margin: 0;
+        @extend .pull-right;
+        @include scr(xs) {
+            float: left !important;
+            margin-left: calc((100vw - 149px) / 2);
         }
     }
+    .download {
+        width: 149px;
+        height: 54px;
+        margin: 13px 10px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include scr(xs) { margin: 15px auto; }
+    }
+    .download-ios {
+        background-image: url('../img/download-ios.png');
+    }
+    .download-android {
+        background-image: url('../img/download-android.png');
+    }
     .intro {
-        background-color: $red;
-        @include scr(xs) {
-            min-height: 560px;
-        }
-        @include scr(md) {
-            min-height: 903px;
-            height: 100vh;
-        }
-        h2 {
-            line-height: 1.6em;
-            color: white;
-            @include scr(xs) {
-                font-size: 22px;
-                text-align: right;
-            }
-            @include scr(md) {
-                font-size: 32px;
-                text-align: left;
-                margin-top: 40%;
-            }
-        }
-        .headline-container {
-            float: right;
-        }
-        .timeline-container {
-            position: relative;
+        .container-fluid {
             padding: 0;
         }
-        .timeline {
-            @include scr(xs) { width: 100%; }
-            @include scr(md) { width: 440px; }
-            position: absolute;
-            top: 0;
-            .timeline-item {
-                clear: both;
-                @include scr(xs) {
-                    font-size: 14px;
-                    padding: 20px 15px 20px 0;
-                }
-                @include scr(md) {
-                    height: 220px;
-                    font-size: 18px;
-                }
-                .description {
-                    float: left;
-                    color: white;
-                    line-height: 1.5em;
-                    text-align: right;
-                    figcaption {
-                        font-weight: 600;
-                    }
-                    @include scr(xs) {
-                        margin-top: 20px;
-                        width: 55%;
-                    }
-                    @include scr(md) {
-                        margin-top: 40px;
-                        width: 200px;
-                    }
-                }
-                .picture {
-                    z-index: 0;
-                    float: right;
-                    .timeline-pic {
-                        @include scr(xs) {
-                            width: 110px;
-                            height: 110px;
-                        }
-                        @include scr(md) {
-                            width: 204px;
-                            height: 203px;
-                        }
-                    }
-                }
-                &.placeholder {
-                    float: right;
-                    @include scr(xs) { display: none; }
-                    img {
-                        width: 440px;
-                    }
-                    &.top {
-                        height: 138px;
-                    }
-                    &.bottom {
-                        height: 125px;
-                    }
-                }
-            }
+    }
+    .slide {
+        @include scr(md) { height: calc(100vh - 80px); }
+        @include scr(xs) { height: 500px; }
+        h2 {
+            @include scr(md) { margin-top: 80px; }
+            @include scr(xs) { margin-top: 60px; }
+            text-align: center;
+            font-weight: 600;
+            line-height: 32px;
+            font-size: 24px;
+            height: 80px;
+            color: white;
+            vertical-align: bottom;
+        }
+        img {
+            margin: 0 auto;
+        }
+    }
+    #slide-1 {
+        background-color: $yellow;
+        h2 {
+            color: black;
+        }
+    }
+    #slide-2 {
+        background-color: $gold;
+        h2 {
+            @include scr(xs) { height: 50px; }
+        }
+    }
+    #slide-3 {
+        background-color: $orange;
+        overflow: hidden;
+        @include scr(xs) { height: 100vh; }
+        h2 {
+            height: 66px;
         }
     }
 }
