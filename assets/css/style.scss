@@ -163,15 +163,11 @@ footer {
 // --------------------
 
 .home-container {
-    $header-height: 80px;
     .header-container {
         padding: 0;
     }
     .header-container * {
         @include scr(md) { float: left; }
-    }
-    .header {
-        height: $header-height;
     }
     $logo-size: 60px;
     $logo-size-xs: 150px;
@@ -183,16 +179,25 @@ footer {
     }
     .title {
         color: $dark;
-        line-height: $header-height;
+        text-align: center;
+        line-height: 80px;
         @include scr(md) { font-size: 34px; margin: 0; }
-        @include scr(xs) { font-size: 40px; margin: 0 auto; width: 180px; }
+        @include scr(xs) { font-size: 40px; margin: 0 auto; }
+    }
+    .tagline {
+        @include scr(md) { display: none; }
+        color: $dark;
+        text-align: center;
+        font-size: 20px;
+        margin: 10px 40px;
     }
     .download-links {
-        margin: 0;
-        @extend .pull-right;
         @include scr(xs) {
-            float: left !important;
-            margin-left: calc((100vw - 149px) / 2);
+            margin: 30px auto;
+        }
+        @include scr(md) {
+            float: right;
+            margin: 0;
         }
     }
     .download {
@@ -218,13 +223,12 @@ footer {
         @include scr(md) { height: calc(100vh - 80px); }
         @include scr(xs) { height: 500px; }
         h2 {
-            @include scr(md) { margin-top: 80px; }
-            @include scr(xs) { margin-top: 60px; }
+            @include scr(md) { margin-top: 80px; height: 80px; }
+            @include scr(xs) { margin-top: 60px; height: 60px; }
             text-align: center;
             font-weight: 600;
             line-height: 32px;
             font-size: 24px;
-            height: 80px;
             color: white;
             vertical-align: bottom;
         }
