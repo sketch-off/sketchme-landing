@@ -221,14 +221,15 @@ footer {
     }
     .slide {
         @include scr(md) { height: calc(100vh - 80px); }
-        @include scr(xs) { height: 500px; }
+        @include scr(xs) { height: 100vh; }
+        overflow: hidden;
         h2 {
-            @include scr(md) { margin-top: 80px; height: 80px; }
-            @include scr(xs) { margin-top: 60px; height: 60px; }
+            margin-top: 40px;
+            height: 60px;
             text-align: center;
             font-weight: 600;
-            line-height: 32px;
-            font-size: 24px;
+            line-height: 28px;
+            font-size: 20px;
             color: white;
             vertical-align: bottom;
         }
@@ -244,17 +245,12 @@ footer {
     }
     #slide-2 {
         background-color: $gold;
-        h2 {
-            @include scr(xs) { height: 50px; }
-        }
     }
     #slide-3 {
         background-color: $orange;
-        overflow: hidden;
-        @include scr(xs) { height: 100vh; }
-        h2 {
-            height: 66px;
-        }
+    }
+    #slide-4 {
+        background-color: $red;
     }
 }
 
